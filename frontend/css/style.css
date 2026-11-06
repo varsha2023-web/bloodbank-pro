@@ -1,0 +1,5 @@
+body{background:#f4f4f5;color:#222}
+.hero{background:linear-gradient(#fff,#fbeaea);border-bottom:3px solid #b02a37;padding:56px 0}
+.card{border:1px solid #e3e3e3;box-shadow:none}.stat{border-left:4px solid #b02a37}
+.stat b{display:block;font-size:1.8rem}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #b02a3766}
+footer{background:#2b0f12;color:#e8d5d5;padding:22px 0;margin-top:40px;font-size:.9rem}

@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin login - LifeLine Blood Bank</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"></head><body>
+<div id="nav"></div><main class="container" style="max-width:420px"><div class="card p-4 mt-5"><h1 class="h4">Admin login</h1>
+<form id="f"><label class="form-label" for="e">Email</label><input id="e" type="email" class="form-control mb-2" required autocomplete="username">
+<label class="form-label" for="p">Password</label><input id="p" type="password" class="form-control" required autocomplete="current-password">
+<div class="form-check my-2"><input class="form-check-input" type="checkbox" id="sh"><label class="form-check-label" for="sh">Show password</label></div>
+<div id="m"></div><button class="btn btn-danger w-100">Log in</button></form><p class="mt-3 mb-0 small text-muted">Authorised staff only.</p></div></main><div id="foot"></div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="js/app.js"></script><script>
+nav();document.getElementById('sh').onchange=e=>document.getElementById('p').type=e.target.checked?'text':'password';
+document.getElementById('f').onsubmit=async e=>{e.preventDefault();const b=e.target.querySelector('button');b.disabled=true;
+ try{const r=await api('/auth/admin-login','POST',{email:document.getElementById('e').value,password:document.getElementById('p').value});location.href=r.role==='admin'?'/admin.html':'/user.html'}
+ catch(x){msg(document.getElementById('m'),x.message);b.disabled=false}};
+</script></body></html>

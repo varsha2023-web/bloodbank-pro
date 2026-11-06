@@ -1,0 +1,4 @@
+{"name":"bloodbank-pro","version":"1.0.0","description":"Blood Bank Management System - academic demonstration (fictional data only)","main":"server.js",
+"scripts":{"start":"node server.js","dev":"nodemon server.js","setup":"node scripts/setup.js","create-admin":"node scripts/createAdmin.js","seed":"node scripts/seed.js"},
+"dependencies":{"bcryptjs":"^2.4.3","cookie-parser":"^1.4.6","dotenv":"^16.4.5","express":"^4.19.2","express-rate-limit":"^7.4.0","helmet":"^7.1.0","jsonwebtoken":"^9.0.2","mysql2":"^3.11.0"},
+"devDependencies":{"nodemon":"^3.1.4"}}
